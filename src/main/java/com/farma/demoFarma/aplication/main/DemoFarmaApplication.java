@@ -3,7 +3,7 @@ package com.farma.demoFarma.aplication.main;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
-import com.farma.demoFarma.aplication.login.Login;
+import com.farma.demoFarma.aplication.views.login.*;
 
 import javafx.application.Application;
 

@@ -1,4 +1,4 @@
-package com.farma.demoFarma.aplication.login;
+package com.farma.demoFarma.aplication.views.login;
 
 import javafx.application.Application;
 import javafx.geometry.Insets;
