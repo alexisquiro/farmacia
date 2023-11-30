@@ -1,5 +1,8 @@
 package com.farma.demoFarma.aplication.views.login;
 
+import com.farma.demoFarma.aplication.user.controller.UserController;
+import com.farma.demoFarma.aplication.user.service.AuthService;
+
 import javafx.application.Application;
 import javafx.geometry.Insets;
 import javafx.scene.Cursor;
@@ -12,7 +15,7 @@ import javafx.scene.layout.GridPane;
 import javafx.stage.Stage;
 
 public class Login extends Application{
-	
+		
 
     public static void main(String[] args) {
         launch(args);
@@ -20,8 +23,6 @@ public class Login extends Application{
 
 	@Override
 	public void start(Stage primaryStage) throws Exception {
-		 primaryStage.setTitle("Login");
-
 		 primaryStage.setTitle("Login");
 
 	        // Crear la interfaz de usuario
@@ -68,6 +69,12 @@ public class Login extends Application{
 	            // Por ahora, simplemente mostramos la información ingresada
 	            System.out.println("Usuario: " + usernameInput.getText());
 	            System.out.println("Contraseña: " + passwordInput.getText());
+	            
+	            UserController userController=new UserController(new AuthService()) ;
+	            
+	           userController.authUser(usernameInput.getText(), passwordInput.getText());
+	           
+	            
 	        });
 
 	        // Agregar componentes al grid
